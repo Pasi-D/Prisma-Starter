@@ -1,0 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+
+# Package Manager Dependent files
+/yarn-error.log
+
+# Configuration files
+.env
+.env.local
+
+# production
+/dist
+
+# misc
+src/config/config.json
+
+# Visual Studio Code
+.vscode/*
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Report Directory
+src/util/ReportExport/Reports
+
+# Server Logs
+/logs 
