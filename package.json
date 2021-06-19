@@ -9,6 +9,7 @@
     "format": "eslint src/**/*.ts --fix",
     "build": "npm run clean && tsc",
     "serve": "npm run build && node dist/server.js",
+    "prisma": "node_modules/.bin/prisma",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
