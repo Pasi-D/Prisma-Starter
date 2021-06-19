@@ -5,6 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "clean": "rm -rf ./dist",
+    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
     "build": "npm run clean && tsc",
@@ -24,6 +25,7 @@
   "author": "Pasindu Dilshan <Pasindu_dilshan@outlook.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^15.12.4",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.29.0",
@@ -31,6 +33,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.1",
     "prisma": "^2.25.0",
+    "ts-node": "^10.0.0",
     "typescript": "^4.3.4"
   },
   "dependencies": {
