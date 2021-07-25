@@ -27,6 +27,14 @@ If you don't have node installed install the version defined in `.nvmrc`. You ca
 ```bash
 nvm use
 ```
+
+### Update environment variables
+
+Create a copy of `.env.dist` and make the appropriate changes in your `.env` file
+
+```bash
+cp .env.dist .env
+```
 > ## Running Locally
 
 ### Install dependencies
