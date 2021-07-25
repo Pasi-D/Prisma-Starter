@@ -16,6 +16,8 @@ This demo is split into following branches to keep in touch with progress.
 4. [0.4-prisma-seed
 ](https://github.com/Pasi-D/Prisma-Starter/tree/4-prisma-seed) - Seeding Database with Prisma seed preview feature.
 
+![Prisma_starter Git Flow](https://user-images.githubusercontent.com/19520064/126897759-9defe0e7-fc7d-4300-94e3-68ac1e002bc0.jpg)
+
 [Read the walkthrough on Medium](https://medium.com/@pasindu-dilshan/simplifying-backend-development-with-prisma-564200f31943)
 
 > ## Prerequisites
