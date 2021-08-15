@@ -11,16 +11,16 @@ generator client {
 }
 
 model User {
-  id        Int     @id @default(autoincrement()) 
-  username  String  @unique 
-  email     String  @unique 
-  posts     Post[] 
-} 
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  email    String @unique
+  posts    Post[]
+}
 
-model Post { 
-  id        Int     @id @default(autoincrement()) 
-  title     String 
-  content   String? 
-  authorId  Int 
-  author    User?   @relation(fields: [authorId], references: [id]) 
-} 
+model Post {
+  id       Int     @id @default(autoincrement())
+  title    String
+  content  String?
+  authorId Int
+  author   User?   @relation(fields: [authorId], references: [id])
+}
