@@ -20,11 +20,12 @@ model User {
 }
 
 model Post {
-  id       Int     @id @default(autoincrement())
+  id       Int           @id @default(autoincrement())
   title    String
   content  String?
   authorId Int?
-  author   User?   @relation(fields: [authorId], references: [id])
+  author   User?         @relation(fields: [authorId], references: [id])
+  tags     TagsOnPosts[]
 }
 
 model Profile {
@@ -32,4 +33,20 @@ model Profile {
   username String @unique
   userId   Int
   user     User   @relation(fields: [userId], references: [id])
+}
+
+model Tag {
+  id    Int           @id @default(autoincrement())
+  name  String        @unique
+  posts TagsOnPosts[]
+}
+
+model TagsOnPosts {
+  tag        Tag      @relation(fields: [tagId], references: [id])
+  tagId      Int
+  post       Post     @relation(fields: [postId], references: [id])
+  postId     Int
+  assignedAt DateTime @default(now())
+
+  @@id([tagId, postId])
 }

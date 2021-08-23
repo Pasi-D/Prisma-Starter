@@ -13,12 +13,23 @@ class App {
                     create: {
                         title: "To Kill a mocking bird",
                         content: "Shoot with a stone",
+                        tags: {
+                            create: [
+                                {
+                                    tag: {
+                                        connectOrCreate: {
+                                            create: { name: "novel" },
+                                            where: { name: "novel" },
+                                        },
+                                    },
+                                },
+                            ],
+                        },
                     },
                 },
             },
             include: {
-                posts: true,
-                profile: true,
+                posts: { include: { tags: true, author: true } },
             },
         });
 
