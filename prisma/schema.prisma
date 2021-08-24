@@ -11,12 +11,15 @@ generator client {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  firstName String
-  lastName  String
-  email     String   @unique
-  profile   Profile?
-  posts     Post[]
+  id          Int      @id @default(autoincrement())
+  firstName   String
+  lastName    String
+  email       String   @unique
+  profile     Profile?
+  posts       Post[]
+  nominator   User?    @relation("UserNomination", fields: [nominatedBy], references: [id]) /// Person who nominates you.
+  nominatedBy Int? /// Nominated user id
+  nomination  User?    @relation("UserNomination") /// Your nomination.
 }
 
 model Post {

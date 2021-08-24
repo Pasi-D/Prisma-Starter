@@ -15,10 +15,33 @@ class App {
                         content: "Shoot with a stone",
                     },
                 },
+                nomination: {
+                    connectOrCreate: {
+                        create: {
+                            email: "watterson@calvinhobbes.com",
+                            firstName: "Bill",
+                            lastName: "Watterson",
+                            posts: {
+                                create: {
+                                    title: "Calvin and hobbes",
+                                    content: "Calvin and his imaginary friend.",
+                                },
+                            },
+                        },
+                        where: {
+                            email: "watterson@calvinhobbes.com",
+                        },
+                    },
+                },
             },
             include: {
                 posts: true,
                 profile: true,
+                nomination: {
+                    include: {
+                        nominator: true,
+                    },
+                },
             },
         });
 
