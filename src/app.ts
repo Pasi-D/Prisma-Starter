@@ -25,6 +25,32 @@ class App {
                         },
                     },
                 },
+                following: {
+                    create: {
+                        email: "watterson@calvinhobbes.com",
+                        firstName: "Bill",
+                        lastName: "watterson",
+                        posts: {
+                            create: {
+                                title: "Calvin & hobbes",
+                                content: "Comic strip of calvin & hobbes",
+                            },
+                        },
+                    },
+                },
+                followedBy: {
+                    create: {
+                        email: "danb@db.com",
+                        firstName: "dan",
+                        lastName: "brown",
+                        posts: {
+                            create: {
+                                title: "Da Vinci Code",
+                                content: "Best seller",
+                            },
+                        },
+                    },
+                },
             },
             include: {
                 posts: {
@@ -33,6 +59,16 @@ class App {
                     },
                 },
                 profile: true,
+                followedBy: {
+                    include: {
+                        posts: true,
+                    },
+                },
+                following: {
+                    include: {
+                        posts: true,
+                    },
+                },
             },
         });
 

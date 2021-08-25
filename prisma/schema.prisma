@@ -17,6 +17,8 @@ model User {
   email     String   @unique
   profile   Profile?
   posts     Post[]
+  followedBy User[]  @relation("UserFollows", references: [id])
+  following  User[]  @relation("UserFollows", references: [id])
 }
 
 model Post {
