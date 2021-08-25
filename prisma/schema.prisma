@@ -17,6 +17,9 @@ model User {
   email     String   @unique
   profile   Profile?
   posts     Post[]
+  managedBy Int?  // Managing User id. Null implies user is above member level.
+  manager   User?    @relation("ManageMembers", fields: [managedBy], references: [id])
+  members   User[]   @relation("ManageMembers") // Members managed by the User
 }
 
 model Post {

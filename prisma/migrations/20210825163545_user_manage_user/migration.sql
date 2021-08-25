@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE `User` ADD COLUMN `managedBy` INTEGER;
+
+-- AddForeignKey
+ALTER TABLE `User` ADD FOREIGN KEY (`managedBy`) REFERENCES `User`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;

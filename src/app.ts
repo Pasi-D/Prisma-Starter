@@ -15,9 +15,28 @@ class App {
                         content: "Shoot with a stone",
                     },
                 },
+                manager: {
+                    create: {
+                        email: "watterson@calvinhobbes.com",
+                        firstName: "Bill",
+                        lastName: "Watterson",
+                        posts: {
+                            create: {
+                                title: "Calvin & Hobbes",
+                                content: "Comic strip about calvin & hobbes",
+                            },
+                        },
+                    },
+                },
             },
             include: {
                 posts: true,
+                manager: {
+                    include: {
+                        posts: true,
+                        members: true,
+                    },
+                },
                 profile: true,
             },
         });
