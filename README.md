@@ -6,19 +6,14 @@
 
 A simple project aimed to demonstrate the simplicity of using Prisma ◭
 
-This demo is split into following branches to keep in touch with progress.
+You can find the articles associated with this project.
 
-1. [0-Initial-Script](https://github.com/Pasi-D/Prisma-Starter/tree/0-Initial-Script) - Starting Code.
-2. [0.1-Setting-Prisma
-](https://github.com/Pasi-D/Prisma-Starter/tree/1-Setting-Prisma) - Setup prisma within codebase.
-3. [0.3-prisma-client
-](https://github.com/Pasi-D/Prisma-Starter/tree/3-prisma-client) - Database Querying with Prisma client.
-4. [0.4-prisma-seed
-](https://github.com/Pasi-D/Prisma-Starter/tree/4-prisma-seed) - Seeding Database with Prisma seed preview feature.
+1. [Simplify backend development with Prisma](https://javascript.plainenglish.io/simplifying-backend-development-with-prisma-564200f31943)
+2. [A deep dive into Prisma Schema](https://javascript.plainenglish.io/diving-into-prisma-schema-b278e92dff8b)
+3. [Data modeling with Prisma](https://pasindu-dilshan.medium.com/data-modeling-with-prisma-5c4c37f31d8c)
 
-![Prisma_starter Git Flow](https://user-images.githubusercontent.com/19520064/126897759-9defe0e7-fc7d-4300-94e3-68ac1e002bc0.jpg)
+![Prisma_starter Git Flow](https://user-images.githubusercontent.com/19520064/131241821-3d4069ed-7a67-4c9c-a887-ca173818506a.jpg)
 
-[Read the walkthrough on Medium](https://medium.com/@pasindu-dilshan/simplifying-backend-development-with-prisma-564200f31943)
 
 > ## Prerequisites
 
