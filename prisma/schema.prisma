@@ -11,16 +11,42 @@ generator client {
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
-  username String @unique
-  email    String @unique
-  posts    Post[]
+  id        Int      @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String   @unique
+  profile   Profile?
+  posts     Post[]
 }
 
 model Post {
-  id       Int     @id @default(autoincrement())
+  id       Int           @id @default(autoincrement())
   title    String
   content  String?
-  authorId Int
-  author   User?   @relation(fields: [authorId], references: [id])
+  authorId Int?
+  author   User?         @relation(fields: [authorId], references: [id])
+  tags     TagsOnPosts[]
+}
+
+model Profile {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  userId   Int
+  user     User   @relation(fields: [userId], references: [id])
+}
+
+model Tag {
+  id    Int           @id @default(autoincrement())
+  name  String        @unique
+  posts TagsOnPosts[]
+}
+
+model TagsOnPosts {
+  tag        Tag      @relation(fields: [tagId], references: [id])
+  tagId      Int
+  post       Post     @relation(fields: [postId], references: [id])
+  postId     Int
+  assignedAt DateTime @default(now())
+
+  @@id([tagId, postId])
 }
