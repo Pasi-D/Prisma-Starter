@@ -1,6 +1,7 @@
 class App {
-    public main(): void {
+    public async main(): Promise<void> {
         console.log("Application Logic Goes Here");
+        process.exit();
     }
 }
 

@@ -23,6 +23,7 @@
   "author": "Pasindu Dilshan <Pasindu_dilshan@outlook.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^16.9.1",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.29.0",
