@@ -31,7 +31,7 @@ model Post {
 model Profile {
   id       Int    @id @default(autoincrement())
   username String @unique
-  userId   Int
+  userId   Int    @unique
   user     User   @relation(fields: [userId], references: [id])
 }
 
