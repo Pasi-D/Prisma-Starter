@@ -51,3 +51,40 @@ npm run serve
 ```bash
 npm run lint
 ```
+## Working with Data Proxy (Currently in Preview)
+
+> Remove the `.env` and create a copy from `.env.proxy` 
+
+```bash
+cp .env.proxy .env
+```
+
+> Update `.env`
+
+> To generate prisma client compatible with data proxy
+
+```bash
+PRISMA_CLIENT_ENGINE_TYPE='dataproxy' npx prisma generate
+```
+
+> To deploy changes to hosted database
+
+1. Make changes to `schema.prisma` as follows
+
+```prisma
+datasource db {
+  provider = "mysql"
+  url      = env("MIGRATE_DATABASE_URL")
+}
+```
+
+2. Then run
+
+```bash
+DATABASE_URL=\"$MIGRATE_DATABASE_URL\" npx prisma migrate deploy
+```
+3. To seed data
+
+```bash
+npx prisma db seed
+```
