@@ -2,6 +2,7 @@
     "recommendations": [
         "coenraads.bracket-pair-colorizer",
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "prisma.prisma"
     ]
 }
